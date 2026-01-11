@@ -1,0 +1,152 @@
+<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Идентификация элементов"
+    Width="650"
+    FontFamily="Segoe UI"
+    FontSize="12"
+    Language="ru-RU"
+    WindowStartupLocation="CenterScreen"
+    ResizeMode="NoResize">
+
+	<Grid Margin="10">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="45"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="50"/>
+			<RowDefinition Height="30"/>
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="20"/>
+			<ColumnDefinition Width="220"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="20"/>
+		</Grid.ColumnDefinitions>
+
+		<!-- Заголовок -->
+		<TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Text="Заполнение параметров INK_ одинаковыми значениями для всех элементов в проекте"
+            FontWeight="SemiBold"
+            TextAlignment="Center"
+            TextWrapping="Wrap"
+            Margin="0,0,0,10"/>
+
+		<!-- 1 -->
+		<TextBlock Grid.Row="1" Grid.Column="0" Text="1." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<TextBlock Grid.Row="1" Grid.Column="1" Text="INK_Объект" VerticalAlignment="Center"/>
+		<TextBox Name="tb_INK_Object" Grid.Row="1" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
+		<CheckBox Name="cb_INK_Object" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"/>
+
+		<!-- 2 -->
+		<TextBlock Grid.Row="2" Grid.Column="0" Text="2." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<TextBlock Grid.Row="2" Grid.Column="1" Text="INK_Подобъект" VerticalAlignment="Center"/>
+		<TextBox Name="tb_INK_SubObject" Grid.Row="2" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
+		<CheckBox Name="cb_INK_SubObject" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center"/>
+
+		<!-- 3 -->
+		<TextBlock Grid.Row="3" Grid.Column="0" Text="3." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<TextBlock Grid.Row="3" Grid.Column="1" Text="INK_№поз. по ГП" VerticalAlignment="Center"/>
+		<TextBox Name="tb_INK_GP" Grid.Row="3" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
+		<CheckBox Name="cb_INK_GP" Grid.Row="3" Grid.Column="3" VerticalAlignment="Center"/>
+
+		<!-- 4 -->
+		<TextBlock Grid.Row="4" Grid.Column="0" Text="4." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<TextBlock Grid.Row="4" Grid.Column="1" Text="INK_Проектная организация" VerticalAlignment="Center"/>
+		<TextBox Name="tb_INK_ProjectOrg" Grid.Row="4" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
+		<CheckBox Name="cb_INK_ProjectOrg" Grid.Row="4" Grid.Column="3" VerticalAlignment="Center"/>
+
+		<!-- 5 -->
+		<TextBlock Grid.Row="5" Grid.Column="0" Text="5." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<TextBlock Grid.Row="5" Grid.Column="1" Text="INK_Раздел проекта РД" VerticalAlignment="Center"/>
+		<TextBox Name="tb_INK_RD_Section" Grid.Row="5" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
+		<CheckBox Name="cb_INK_RD_Section" Grid.Row="5" Grid.Column="3" VerticalAlignment="Center"/>
+
+		<!-- 6 -->
+		<TextBlock Grid.Row="6" Grid.Column="0" Text="6." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<TextBlock Grid.Row="6" Grid.Column="1" Text="INK_Шифр комплекта РД" VerticalAlignment="Center"/>
+		<TextBox Name="tb_INK_RD_Code" Grid.Row="6" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
+		<CheckBox Name="cb_INK_RD_Code" Grid.Row="6" Grid.Column="3" VerticalAlignment="Center"/>
+
+		<!-- 7 -->
+		<TextBlock Grid.Row="7" Grid.Column="0" Text="7." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<TextBlock Grid.Row="7" Grid.Column="1" Text="INK_Изменение" VerticalAlignment="Center"/>
+		<TextBox Name="tb_INK_Revision" Grid.Row="7" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
+		<CheckBox Name="cb_INK_Revision" Grid.Row="7" Grid.Column="3" VerticalAlignment="Center"/>
+
+		<!-- 8 -->
+		<TextBlock Grid.Row="8" Grid.Column="0" Text="8." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<TextBlock Grid.Row="8" Grid.Column="1" Text="INK_Статус" VerticalAlignment="Center"/>
+		<TextBox Name="tb_INK_Status" Grid.Row="8" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
+		<CheckBox Name="cb_INK_Status" Grid.Row="8" Grid.Column="3" VerticalAlignment="Center"/>
+
+		<!-- 9 -->
+		<TextBlock Grid.Row="9" Grid.Column="0" Text="9." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<TextBlock Grid.Row="9" Grid.Column="1" Text="INK_ID_Element" VerticalAlignment="Center"/>
+		<TextBlock
+            Grid.Row="9"
+            Grid.Column="2"
+            Text="Формируется автоматически, вручную не заполняется"
+            TextWrapping="Wrap"
+            Foreground="Gray"
+			VerticalAlignment="Center"/>
+		<CheckBox Name="cb_ID" Grid.Row="9" Grid.Column="3" VerticalAlignment="Center"/>
+
+		<Border
+    Grid.Row="10"
+    Grid.Column="0"
+    Grid.ColumnSpan="4"
+    Background="#FFF9F9F9"
+    BorderBrush="#FFCCCCCC"
+    BorderThickness="1"
+    CornerRadius="5"
+    Padding="8"
+    Margin="0,5,0,5">
+
+			<TextBlock TextWrapping="Wrap">
+				<Run FontWeight="SemiBold" Text="Примечание:"/>
+				<LineBreak/>
+				Значения будут применены или очищены только для тех параметров,
+				рядом с которыми установлена галочка.
+				<LineBreak/>
+				Параметры без галочки не изменяются.
+			</TextBlock>
+
+		</Border>
+
+		<!-- Кнопки -->
+		<StackPanel
+            Grid.Row="11"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Orientation="Horizontal"
+            HorizontalAlignment="Right"
+            Margin="0,10,0,0">
+
+			<Button Name="btnApply" Click="apply_params" Content="Применить" Width="120" Margin="0,0,10,0"/>
+			<Button Name="btnClear" Click="clear_params" Content="Очистить значения" Width="160"/>
+		</StackPanel>
+		<TextBlock
+    		Name="tbStatus"
+    		Grid.Row="12"
+			Grid.Column="0"
+			Grid.ColumnSpan="4"
+			Margin="0,5,0,0"
+			Text=""
+			Foreground="DarkGreen"
+			TextWrapping="Wrap"
+			HorizontalAlignment="Center"/>
+	</Grid>
+</Window>
