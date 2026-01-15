@@ -20,6 +20,7 @@
 			<RowDefinition Height="30"/>
 			<RowDefinition Height="30"/>
 			<RowDefinition Height="30"/>
+			<RowDefinition Height="30"/>
 			<RowDefinition Height="45"/>
 			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="50"/>
@@ -82,38 +83,44 @@
 
 		<!-- 7 -->
 		<TextBlock Grid.Row="7" Grid.Column="0" Text="7." HorizontalAlignment="Center" VerticalAlignment="Center"/>
-		<TextBlock Grid.Row="7" Grid.Column="1" Text="INK_Изменение" VerticalAlignment="Center"/>
-		<TextBox Name="tb_INK_Revision" Grid.Row="7" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
-		<CheckBox Name="cb_INK_Revision" Grid.Row="7" Grid.Column="3" VerticalAlignment="Center"/>
+		<TextBlock Grid.Row="7" Grid.Column="1" Text="INK_Обозначение КД" VerticalAlignment="Center"/>
+		<TextBox Name="tb_INK_KD_Code" Grid.Row="7" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
+		<CheckBox Name="cb_INK_KD_Code" Grid.Row="7" Grid.Column="3" VerticalAlignment="Center"/>
 
 		<!-- 8 -->
 		<TextBlock Grid.Row="8" Grid.Column="0" Text="8." HorizontalAlignment="Center" VerticalAlignment="Center"/>
-		<TextBlock Grid.Row="8" Grid.Column="1" Text="INK_Статус" VerticalAlignment="Center"/>
-		<TextBox Name="tb_INK_Status" Grid.Row="8" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
-		<CheckBox Name="cb_INK_Status" Grid.Row="8" Grid.Column="3" VerticalAlignment="Center"/>
+		<TextBlock Grid.Row="8" Grid.Column="1" Text="INK_Изменение" VerticalAlignment="Center"/>
+		<TextBox Name="tb_INK_Revision" Grid.Row="8" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
+		<CheckBox Name="cb_INK_Revision" Grid.Row="8" Grid.Column="3" VerticalAlignment="Center"/>
 
 		<!-- 9 -->
 		<TextBlock Grid.Row="9" Grid.Column="0" Text="9." HorizontalAlignment="Center" VerticalAlignment="Center"/>
-		<TextBlock Grid.Row="9" Grid.Column="1" Text="INK_ID_Element" VerticalAlignment="Center"/>
+		<TextBlock Grid.Row="9" Grid.Column="1" Text="INK_Статус" VerticalAlignment="Center"/>
+		<TextBox Name="tb_INK_Status" Grid.Row="9" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
+		<CheckBox Name="cb_INK_Status" Grid.Row="9" Grid.Column="3" VerticalAlignment="Center"/>
+
+		<!-- 10 -->
+		<TextBlock Grid.Row="10" Grid.Column="0" Text="10." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<TextBlock Grid.Row="10" Grid.Column="1" Text="INK_ID_Element" VerticalAlignment="Center"/>
 		<TextBlock
-            Grid.Row="9"
+            Grid.Row="10"
             Grid.Column="2"
             Text="Формируется автоматически, вручную не заполняется"
             TextWrapping="Wrap"
             Foreground="Gray"
 			VerticalAlignment="Center"/>
-		<CheckBox Name="cb_ID" Grid.Row="9" Grid.Column="3" VerticalAlignment="Center"/>
+		<CheckBox Name="cb_ID" Grid.Row="10" Grid.Column="3" VerticalAlignment="Center"/>
 
 		<Border
-    Grid.Row="10"
-    Grid.Column="0"
-    Grid.ColumnSpan="4"
-    Background="#FFF9F9F9"
-    BorderBrush="#FFCCCCCC"
-    BorderThickness="1"
-    CornerRadius="5"
-    Padding="8"
-    Margin="0,5,0,5">
+			Grid.Row="11"
+			Grid.Column="0"
+			Grid.ColumnSpan="4"
+			Background="#FFF9F9F9"
+			BorderBrush="#FFCCCCCC"
+			BorderThickness="1"
+			CornerRadius="5"
+			Padding="8"
+			Margin="0,5,0,5">
 
 			<TextBlock TextWrapping="Wrap">
 				<Run FontWeight="SemiBold" Text="Примечание:"/>
@@ -128,7 +135,7 @@
 
 		<!-- Кнопки -->
 		<StackPanel
-            Grid.Row="11"
+            Grid.Row="12"
             Grid.Column="0"
             Grid.ColumnSpan="4"
             Orientation="Horizontal"
@@ -140,7 +147,7 @@
 		</StackPanel>
 		<TextBlock
     		Name="tbStatus"
-    		Grid.Row="12"
+    		Grid.Row="13"
 			Grid.Column="0"
 			Grid.ColumnSpan="4"
 			Margin="0,5,0,0"

@@ -250,6 +250,10 @@ class MyWindow(Windows.Window):
                 "enabled": self.cb_INK_RD_Code.IsChecked,
                 "value": self.tb_INK_RD_Code.Text
             },
+            "INK_Обозначение КД": {
+                "enabled": self.cb_INK_KD_Code.IsChecked,
+                "value": self.tb_INK_KD_Code.Text
+            },
             "INK_Изменение": {
                 "enabled": self.cb_INK_Revision.IsChecked,
                 "value": self.tb_INK_Revision.Text
