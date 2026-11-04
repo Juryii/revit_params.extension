@@ -15,6 +15,11 @@ downloads/
 eggs/
 .eggs/
 lib/
+!/lib/
+/lib/*
+!/lib/support_cutting.py
+/семейства/
+/tmp/
 lib64/
 parts/
 sdist/

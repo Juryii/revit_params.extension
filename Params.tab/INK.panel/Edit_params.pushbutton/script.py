@@ -10,7 +10,6 @@ Description:
 """
 
 
-__highlight__ = "new"
 __min_revit_ver__ = 2019
 __max_revit_ver = 2025
 
