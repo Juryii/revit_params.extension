@@ -1,6 +1,8 @@
 ﻿"""Количество закупаемых шпилек и траверс с картой раскроя. Модель не изменяется."""
 import math
 from collections import Counter
+import clr
+clr.AddReference('PresentationFramework')
 from System.Windows import SystemParameters
 from pyrevit import DB, forms, revit, script
 from support_cutting import collect, pack, SearchBudget, SearchCancelled
