@@ -1,0 +1,53 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Воздуховоды, шины и уголки" Width="610" SizeToContent="Height"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+  <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <StackPanel Margin="20">
+      <TextBlock Text="Закупка воздуховодов, шин и уголков" FontSize="18" FontWeight="Bold" Margin="0,0,0,12"/>
+      <TextBlock Text="Область расчёта"/>
+      <ComboBox x:Name="scope" SelectedIndex="0" Margin="0,4,0,10">
+        <ComboBoxItem Content="Весь проект"/>
+        <ComboBoxItem Content="Текущий вид"/>
+        <ComboBoxItem x:Name="selected_scope" Content="Выбранные элементы"/>
+      </ComboBox>
+      <TextBlock Text="Закупка или готовые отрезки"/>
+      <ComboBox x:Name="mode" SelectedIndex="0" Margin="0,4,0,6">
+        <ComboBoxItem Content="Новая закупка: раскрой заготовок 1250 мм"/>
+        <ComboBoxItem Content="Уже нарезаны: у каждого один заводской торец"/>
+        <ComboBoxItem Content="Уже нарезаны: оба торца без заводского фланца"/>
+      </ComboBox>
+      <TextBlock TextWrapping="Wrap" Foreground="Gray" Text="Целые 1250 мм — с двумя заводскими фланцами. В новом раскрое сохраняются крайние заводские торцы; средние отрезки требуют двух новых фланцев." Margin="0,0,0,10"/>
+      <TextBlock Text="Уголок для шины 20"/>
+      <ComboBox x:Name="corner20" SelectedIndex="0" Margin="0,4,0,6">
+        <ComboBoxItem Content="УГФ-0 — 65×18×3 мм"/>
+        <ComboBoxItem Content="УГФ-1 — 95×18×3 мм"/>
+      </ComboBox>
+      <TextBlock Text="Шина 30 — УГФ-2, 105×27×3 мм. По 4 уголка на новый фланец." Foreground="Gray" Margin="0,0,0,12"/>
+      <Grid>
+        <Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition/></Grid.ColumnDefinitions>
+        <StackPanel Margin="0,0,8,0">
+          <TextBlock Text="Заготовка шины 20, мм"/>
+          <TextBox x:Name="stock20" Text="3000" Margin="0,4,0,10"/>
+          <TextBlock Text="Вычет на одну шину 20, мм"/>
+          <TextBox x:Name="deduction20" Text="0" Margin="0,4,0,10"/>
+          <TextBlock Text="Потеря на рез воздуховода, мм"/>
+          <TextBox x:Name="duct_kerf" Text="0" Margin="0,4,0,10"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="8,0,0,0">
+          <TextBlock Text="Заготовка шины 30, мм"/>
+          <TextBox x:Name="stock30" Text="3000" Margin="0,4,0,10"/>
+          <TextBlock Text="Вычет на одну шину 30, мм"/>
+          <TextBox x:Name="deduction30" Text="0" Margin="0,4,0,10"/>
+          <TextBlock Text="Потеря на рез шинорейки, мм"/>
+          <TextBox x:Name="rail_kerf" Text="0" Margin="0,4,0,10"/>
+        </StackPanel>
+      </Grid>
+      <TextBlock TextWrapping="Wrap" Foreground="Gray" Text="Длина одной шины = сторона сечения − вычет под уголки. При вычете 0 метраж считается по периметру. Размер шины: большая сторона до 1000 мм — 20, больше — 30." Margin="0,0,0,8"/>
+      <CheckBox x:Name="details" Content="Подробно: карты раскроя и заводские торцы" IsChecked="False" Margin="0,0,0,10"/>
+      <TextBlock TextWrapping="Wrap" Foreground="Gray" Text="Только прямые прямоугольные воздуховоды без производителя. Системы объединяются для раскроя одинаковых сечений и материалов. Фасонные детали не учитываются. Модель не изменяется." Margin="0,0,0,8"/>
+      <TextBlock x:Name="error" Foreground="Firebrick" TextWrapping="Wrap"/>
+      <Button Content="Рассчитать" Click="calculate_click" IsDefault="True" Height="32" Margin="0,6,0,0"/>
+    </StackPanel>
+  </ScrollViewer>
+</Window>

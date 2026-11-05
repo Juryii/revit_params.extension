@@ -1,4 +1,4 @@
-"""Draw the two ribbon icons from editable vector primitives (requires Pillow)."""
+"""Draw ribbon icons from editable vector primitives (requires Pillow)."""
 from pathlib import Path
 from xml.sax.saxutils import quoteattr
 from PIL import Image, ImageDraw
@@ -7,6 +7,8 @@ ROOT = Path(__file__).resolve().parents[1]
 BUTTONS = {
     'purchase': ROOT / 'Params.tab/Крепления.panel/Расчет закупки.pushbutton',
     'parameters': ROOT / 'Params.tab/INK.panel/Edit_params.pushbutton',
+    'duct_split': ROOT / 'Params.tab/Воздуховоды.panel/Разбить по 1250.pushbutton',
+    'duct_flanges': ROOT / 'Params.tab/Воздуховоды.panel/Закупка воздуховодов.pushbutton',
 }
 
 
@@ -14,6 +16,25 @@ def primitives(name, dark=False):
     ink = '#dbeafe' if dark else '#24466b'
     blue = '#60bfff' if dark else '#168bd1'
     orange = '#ffbd69' if dark else '#e88a24'
+    if name == 'duct_flanges':
+        return [
+            ('rect', dict(x=5, y=3, width=22, height=20, rx=1, fill='none', stroke=blue)),
+            ('rect', dict(x=9, y=7, width=14, height=12, rx=1, fill='none', stroke=ink)),
+            ('line', dict(x1=3, y1=8, x2=3, y2=2, stroke=orange)),
+            ('line', dict(x1=3, y1=2, x2=10, y2=2, stroke=orange)),
+            ('line', dict(x1=29, y1=18, x2=29, y2=24, stroke=orange)),
+            ('line', dict(x1=29, y1=24, x2=22, y2=24, stroke=orange)),
+            ('line', dict(x1=5, y1=28, x2=26, y2=28, stroke=ink)),
+        ]
+    if name == 'duct_split':
+        return [
+            ('rect', dict(x=2, y=8, width=17, height=15, rx=1, fill='none', stroke=blue)),
+            ('rect', dict(x=23, y=8, width=7, height=15, rx=1, fill='none', stroke=ink)),
+            ('line', dict(x1=21, y1=3, x2=21, y2=28, stroke=orange)),
+            ('line', dict(x1=5, y1=27, x2=16, y2=27, stroke=blue)),
+            ('line', dict(x1=5, y1=25, x2=5, y2=29, stroke=blue)),
+            ('line', dict(x1=16, y1=25, x2=16, y2=29, stroke=blue)),
+        ]
     if name == 'purchase':
         return [
             ('rect', dict(x=2, y=3, width=27, height=5, rx=1.5, fill=blue)),

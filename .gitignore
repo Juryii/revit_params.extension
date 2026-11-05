@@ -18,6 +18,8 @@ lib/
 !/lib/
 /lib/*
 !/lib/support_cutting.py
+!/lib/duct_split.py
+!/lib/duct_flanges.py
 /семейства/
 /tmp/
 lib64/
